@@ -57,7 +57,7 @@ if(!empty($_POST['name']) || !empty($_POST['pass']) || !empty($_POST['email']) |
     $date = $_POST["date"];
     $gender = $_POST["inlineRadioOptions"];
     $favcolor = $_POST["favcolor"];
-}
-echo '<table class="col-sm-3"><tr><th>Имя</th><td>' . $name . '</td></tr><tr><th>Пароль</th><td>' . $pass . '</td></tr><tr><th>Email</th><td>' . $email . '</td></tr>
+    echo '<table class="col-sm-3"><tr><th>Имя</th><td>' . $name . '</td></tr><tr><th>Пароль</th><td>' . $pass . '</td></tr><tr><th>Email</th><td>' . $email . '</td></tr>
 <tr><th>Дата рождения</th><td>' . $date . '</td></tr><tr><th>Пол</th><td>' . $gender . '</td></tr><tr><th>Любимый цвет</th><td bgcolor="' . $favcolor . '">' . $favcolor . '</td></tr></table>';
+}
 ?>
