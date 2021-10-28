@@ -33,13 +33,13 @@ function arr($length, $arr = []) {
         $arr[] = mt_rand(1, 10);
     }
     print_r($arr);
-/* 3.Выведите все чётные и все нечётные элементы массива из задания 2*/
+    /* 3.Выведите все чётные и все нечётные элементы массива из задания 2*/
     echo "чётные";
     foreach ($arr as $value) {
         if ($value % 2 === 0) {
-           echo "<pre>";
-           print_r($value);
-           echo "</pre>";
+            echo "<pre>";
+            print_r($value);
+            echo "</pre>";
         }
     }
     echo "нечётные";
@@ -51,11 +51,11 @@ function arr($length, $arr = []) {
         }
     }
 
-/* 4.Отсортируйте массив из задания 2 по ключу в обратном порядке*/
+    /* 4.Отсортируйте массив из задания 2 по ключу в обратном порядке*/
     krsort($arr);
     print_r($arr);
 
-/* 5.Отсортируйте массив из задания 2 по значению в обратном порядке*/
+    /* 5.Отсортируйте массив из задания 2 по значению в обратном порядке*/
     arsort($arr);
     print_r($arr);
 
@@ -85,10 +85,10 @@ $someArr =  [
     ],
 ];
 foreach ($someArr as $product => $items) {
-        foreach ($items as $k => $val) {
-            echo "<pre>";
-            echo "{$product} : {$val['name']}, {$val['price']}, {$val['delivery']} ";
-        }
+    foreach ($items as $k => $val) {
+        echo "<pre>";
+        echo "{$product} : {$val['name']}, {$val['price']}, {$val['delivery']} ";
+    }
 }
 echo "<pre>";
 
