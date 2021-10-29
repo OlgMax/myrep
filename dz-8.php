@@ -24,7 +24,6 @@ function fibonacci($n,$f = 0,$s = 1) {
 echo "<pre>";
 print_r(fibonacci(10));
 
-
 /* 2.Создайте в цикле (for либо while) одномерный массив из 10 элементов, где значение на каждой итерации - произвольное число от 1 до 10 (используйте функцию mt_rand)*/
 
 function arr($length, $arr = []) {
@@ -60,7 +59,6 @@ function arr($length, $arr = []) {
     print_r($arr);
 
 }
-echo "<pre>";
 print_r(arr(10));
 
 
