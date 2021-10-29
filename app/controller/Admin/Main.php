@@ -1,17 +1,13 @@
 <?php
 namespace Controller\Admin;
+
 use Controller\Controller;
 
-class Index extends Controller {
+class Main extends Controller {
     public function index() {
-        print_r("Admin index");
+        print_r(" Admin Main Page");
         $this->generate('/admin/admin/index');
     }
-    public function view() {
-    print_r("Admin view");
-    }
-
 }
-
-$obj = new Index();
+$obj = new Main();
 print_r($obj);

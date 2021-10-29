@@ -7,7 +7,11 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Controller\\Admin\\Index' => $baseDir . '/app/controller/Admin/Index.php',
+    'Controller\\Admin\\Main' => $baseDir . '/app/controller/Admin/Main.php',
+    'Controller\\Controller' => $baseDir . '/app/controller/Controller.php',
     'Controller\\Errors\\Error404' => $baseDir . '/app/controller/Errors/Error404.php',
     'Controller\\Home\\Index' => $baseDir . '/app/controller/Home/Index.php',
+    'Controller\\Home\\Main' => $baseDir . '/app/controller/Home/Main.php',
     'Core\\Router' => $baseDir . '/core/Router.php',
+    'Core\\View' => $baseDir . '/core/View.php',
 );
