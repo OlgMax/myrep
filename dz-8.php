@@ -88,9 +88,9 @@ foreach ($someArr as $product => $items) {
     foreach ($items as $k => $val) {
         echo "<pre>";
         echo "{$product} : {$val['name']}, {$val['price']}, {$val['delivery']} ";
+        echo "</pre>";
     }
 }
-echo "<pre>";
 
 $end = false;
 $keys = ['flowers', 'fruits'];
