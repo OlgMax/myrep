@@ -90,20 +90,27 @@ foreach ($someArr as $product => $items) {
     }
 }
 
-$end = false;
-$keys = ['flowers', 'fruits'];
-while (!$end) {
-    for ($i = 0; $i < count($keys); $i++) {
-        $key = $keys[$i];
-        for ($j = 0; $j < count($someArr[$key]); $j++) {
-            echo "{$someArr[$key][$j]['name']}, {$someArr[$key][$j]['price']}, {$someArr[$key][$j]['delivery']}" . '<br>';
-        }
-    }
-    $end = true;
-}
 for ($i = 0; $i < count($keys); $i++) {
     $key = $keys[$i];
     for ($j = 0; $j < count($someArr[$key]); $j++) {
         echo "{$someArr[$key][$j]['name']}, {$someArr[$key][$j]['price']}, {$someArr[$key][$j]['delivery']}" . '<br>';
     }
+}
+/* 7.ИСПРАВЛЕНИЯ*/
+/* Вариант №1 - если нужно получить следующий за указанным вложенный массив*/
+function get_next($array, $key) {
+    $currentKey = key($array);
+    while ($currentKey !== null && $currentKey != $key) {
+        next($array);
+        $currentKey = key($array);
+    }
+    return next($array);
+}
+echo '<pre>';
+print_r(get_next($someArr, 'flowers'));
+
+/* Вариант №2*/
+while (list($var, $val) = each($someArr)) {
+    echo '<pre>';
+    print_r($val);
 }
