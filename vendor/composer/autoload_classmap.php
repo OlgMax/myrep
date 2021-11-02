@@ -7,11 +7,16 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Controller\\Admin\\Index' => $baseDir . '/app/controller/Admin/Index.php',
-    'Controller\\Admin\\Main' => $baseDir . '/app/controller/Admin/Main.php',
+    'Controller\\Admin\\Post' => $baseDir . '/app/controller/Admin/Post.php',
+    'Controller\\Admin\\User' => $baseDir . '/app/controller/Admin/User.php',
     'Controller\\Controller' => $baseDir . '/app/controller/Controller.php',
     'Controller\\Errors\\Error404' => $baseDir . '/app/controller/Errors/Error404.php',
+    'Controller\\Home\\About' => $baseDir . '/app/controller/Home/About.php',
+    'Controller\\Home\\Contacts' => $baseDir . '/app/controller/Home/Contacts.php',
     'Controller\\Home\\Index' => $baseDir . '/app/controller/Home/Index.php',
-    'Controller\\Home\\Main' => $baseDir . '/app/controller/Home/Main.php',
+    'Controller\\Home\\Post' => $baseDir . '/app/controller/Home/Post.php',
     'Core\\Router' => $baseDir . '/core/Router.php',
     'Core\\View' => $baseDir . '/core/View.php',
+    'Models\\Post' => $baseDir . '/app/models/Post.php',
+    'Models\\User' => $baseDir . '/app/models/User.php',
 );

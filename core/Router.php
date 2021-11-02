@@ -51,7 +51,7 @@ class Router
             $path = explode('/', $_SERVER['REDIRECT_URL']);
         }
         $this->dir = (!empty($path[1])) ? $path[1] : 'index';
-        $this->controller = (!empty($path[2])) ? $path[2] : 'main';
+        $this->controller = (!empty($path[2])) ? $path[2] : 'index';
         $this->method = (!empty($path[3])) ? $path[3] : 'index';
     }
 }
