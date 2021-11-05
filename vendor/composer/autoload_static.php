@@ -7,6 +7,14 @@ namespace Composer\Autoload;
 class ComposerStaticInit775f1b447c49ff144d0bdd9487390b55
 {
     public static $prefixLengthsPsr4 = array (
+        'M' => 
+        array (
+            'Models\\' => 7,
+        ),
+        'L' => 
+        array (
+            'Lib\\' => 4,
+        ),
         'C' => 
         array (
             'Core\\' => 5,
@@ -19,6 +27,14 @@ class ComposerStaticInit775f1b447c49ff144d0bdd9487390b55
     );
 
     public static $prefixDirsPsr4 = array (
+        'Models\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/app/models',
+        ),
+        'Lib\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/lib',
+        ),
         'Core\\' => 
         array (
             0 => __DIR__ . '/../..' . '/core',
@@ -35,13 +51,19 @@ class ComposerStaticInit775f1b447c49ff144d0bdd9487390b55
 
     public static $classMap = array (
         'Controller\\Admin\\Index' => __DIR__ . '/../..' . '/app/controller/Admin/Index.php',
-        'Controller\\Admin\\Main' => __DIR__ . '/../..' . '/app/controller/Admin/Main.php',
+        'Controller\\Admin\\Post' => __DIR__ . '/../..' . '/app/controller/Admin/Post.php',
+        'Controller\\Admin\\User' => __DIR__ . '/../..' . '/app/controller/Admin/User.php',
         'Controller\\Controller' => __DIR__ . '/../..' . '/app/controller/Controller.php',
         'Controller\\Errors\\Error404' => __DIR__ . '/../..' . '/app/controller/Errors/Error404.php',
+        'Controller\\Home\\About' => __DIR__ . '/../..' . '/app/controller/Home/About.php',
+        'Controller\\Home\\Contacts' => __DIR__ . '/../..' . '/app/controller/Home/Contacts.php',
         'Controller\\Home\\Index' => __DIR__ . '/../..' . '/app/controller/Home/Index.php',
-        'Controller\\Home\\Main' => __DIR__ . '/../..' . '/app/controller/Home/Main.php',
+        'Controller\\Home\\Post' => __DIR__ . '/../..' . '/app/controller/Home/Post.php',
         'Core\\Router' => __DIR__ . '/../..' . '/core/Router.php',
         'Core\\View' => __DIR__ . '/../..' . '/core/View.php',
+        'Lib\\DB\\Connector' => __DIR__ . '/../..' . '/lib/DB/Connector.php',
+        'Models\\Post' => __DIR__ . '/../..' . '/app/models/Post.php',
+        'Models\\User' => __DIR__ . '/../..' . '/app/models/User.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
