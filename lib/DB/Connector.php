@@ -9,7 +9,6 @@ class Connector
         $config = include 'app/config/database.php';
         $dns = $config['driver'].':dbname='.$config['db_name'] .';port='.$config['port'].';host='.$config['host'];
         $this->connect = new PDO($dns, $config['user'], $config['pass']);
-        var_dump($this->connect);
     }
     public function getConnect()
     {
