@@ -1,17 +1,28 @@
 <?php
 namespace Models;
 
-class Post
+use Models\Common\Model;
+
+class Post extends Model
 {
     public $somePost =  [
-        'articles' => [
-            ['id' => '1', 'title' => 'Metallica', 'author' => 'Hetfield', 'description' => 'Metallica is the best'],
-            ['id' => '2', 'title' => 'Manowar', 'author' => 'Adams', 'description' => 'Manowar is the best'],
-            ['id' => '3', 'title' => 'Rammstein', 'author' => 'Lindemann', 'description' => 'Rammstein is the best'],
+        'people' => [
+            ['name' => 'Jon', 'age' => 10, 'city' => 'NY'],
+            ['name' => 'Bob', 'age' => 20, 'city' => 'Kiev'],
+            ['name' => 'Lily', 'age' => 55, 'city' => 'Dnepr'],
         ],
     ];
-    public function getPost()
+    public function getSomePost()
     {
         return $this->somePost;
+    }
+    public function getPosts(array $filters = [])
+    {
+        $select = $this->select();
+        $select->setTableNames('posts');
+        $select->setWhereCondition([ 'id' => 2, 'subject' => 'some subject']);
+        $select->execute();
+        return[];
+
     }
 }

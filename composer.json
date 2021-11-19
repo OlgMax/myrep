@@ -14,7 +14,8 @@
       "Core\\": "core/",
       "Models\\": "app/models/",
       "Lib\\": "lib/",
-      "Controller\\": "app/controller/"
+      "Controller\\": "app/controller/",
+      "Helper\\": "app/helper/"
     }
   }
 }

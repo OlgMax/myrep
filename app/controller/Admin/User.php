@@ -2,14 +2,14 @@
 namespace Controller\Admin;
 use Models\User as UserModel;
 use Controller\Controller;
+use Helper\GlobalFilters;
 
 class User extends Controller
 {
     public function Index()
     {
         $userModel = new UserModel();
-        $data = $userModel->getUser();
-        $this->generate('/admin/user/index', $data);
+        $this->generate('/admin/user/index', $userModel->getUsers(GlobalFilters::postFilter()));
     }
 }
 

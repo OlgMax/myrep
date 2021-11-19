@@ -1,17 +1,16 @@
 <?php
 namespace Controller\Home;
+use Models\Contacts as ContactsModel;
 use Controller\Controller;
+use Helper\GlobalFilters;
+
 
 class Contacts extends Controller
 {
-    public function index()
+    public function Index()
     {
-        $this->generate('/home/contacts/index');
+        $contactsModel = new ContactsModel();
+        $this->generate('/home/contacts/index', $contactsModel->getContacts(GlobalFilters::postFilter()));
     }
+
 }
-$obj = new Contacts();
-print_r($obj);
-
-
-
-

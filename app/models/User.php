@@ -1,7 +1,8 @@
 <?php
 namespace Models;
+use Models\Common\Model;
 
-class User
+class User extends Model
 {
     public $someUser =  [
         'people' => [
@@ -11,8 +12,17 @@ class User
         ],
     ];
 
-    public function getUser()
+    public function getSomeUser()
     {
         return $this->someUser;
+    }
+    public function getUsers(array $filters = [])
+    {
+        $select = $this->select();
+        $select->setTableNames('users');
+        $select->setWhereCondition(['like', ['user_name' => 'Bob']]);
+        $select->execute();
+        return[];
+
     }
 }

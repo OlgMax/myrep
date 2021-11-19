@@ -5,6 +5,7 @@ use Controller\Main;
 use Controller\Errors\Error404;
 use Controller\Admin\Index;
 use Controller\Home;
+use Helper;
 
 class Router
 {

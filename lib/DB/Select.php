@@ -1,7 +1,8 @@
 <?php
 namespace Lib\DB;
-
-class Select
+use Lib\DB\Common\Bridge;
+use Lib\DB\Where;
+class Select extends Bridge
 {
     private $tableNames;
     private $fieldNames = '*';
@@ -9,6 +10,12 @@ class Select
     private $orderedType;
     private $limited;
     private $offset = 0;
+    public $whereCondition;
+
+    public function setWhereCondition($whereCondition): void
+    {
+        $this->whereCondition = $whereCondition;
+    }
 
     private function buildOutputSpring($stringToBuild, $order=false)
     {
@@ -97,6 +104,7 @@ class Select
     public function getSqlString()
     {
         $sql='SELECT '.$this->getFieldNames().' FROM '.$this->getTableNames();
+
         if (!empty($this->ordered)) {
             $sql .= ' ORDER BY ' . $this->getOrdered();
         }
@@ -106,7 +114,17 @@ class Select
                 $sql .= ', ' . $this->getOffset();
             }
         }
-        return $sql;
+        if (!empty($this->whereCondition)) {
+        $where = new Where($this->whereCondition);
+        $sglStringW = $where->getSqlWhereString();
+        }
+        return $sql.$sglStringW;
     }
-
+    public function execute()
+    {
+        $result = $this->fromDB();
+        var_dump($result);
+        $result = $result->fetchAll(\PDO::FETCH_ASSOC
+        );
+    }
 }

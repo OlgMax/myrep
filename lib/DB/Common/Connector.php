@@ -1,5 +1,5 @@
 <?php
-namespace Lib\DB;
+namespace Lib\DB\Common;
 use PDO;
 class Connector
 {

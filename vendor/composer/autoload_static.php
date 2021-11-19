@@ -15,6 +15,10 @@ class ComposerStaticInit775f1b447c49ff144d0bdd9487390b55
         array (
             'Lib\\' => 4,
         ),
+        'H' => 
+        array (
+            'Helper\\' => 7,
+        ),
         'C' => 
         array (
             'Core\\' => 5,
@@ -34,6 +38,10 @@ class ComposerStaticInit775f1b447c49ff144d0bdd9487390b55
         'Lib\\' => 
         array (
             0 => __DIR__ . '/../..' . '/lib',
+        ),
+        'Helper\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/app/helper',
         ),
         'Core\\' => 
         array (
@@ -61,7 +69,13 @@ class ComposerStaticInit775f1b447c49ff144d0bdd9487390b55
         'Controller\\Home\\Post' => __DIR__ . '/../..' . '/app/controller/Home/Post.php',
         'Core\\Router' => __DIR__ . '/../..' . '/core/Router.php',
         'Core\\View' => __DIR__ . '/../..' . '/core/View.php',
-        'Lib\\DB\\Connector' => __DIR__ . '/../..' . '/lib/DB/Connector.php',
+        'Helper\\GlobalFilters' => __DIR__ . '/../..' . '/app/helper/GlobalFilters.php',
+        'Lib\\DB\\Common\\Bridge' => __DIR__ . '/../..' . '/lib/DB/Common/Bridge.php',
+        'Lib\\DB\\Common\\Connector' => __DIR__ . '/../..' . '/lib/DB/Common/Connector.php',
+        'Lib\\DB\\Common\\SQL' => __DIR__ . '/../..' . '/lib/DB/Common/SQL.php',
+        'Lib\\DB\\Select' => __DIR__ . '/../..' . '/lib/DB/Select.php',
+        'Lib\\DB\\Where' => __DIR__ . '/../..' . '/lib/DB/Where.php',
+        'Models\\Common\\Model' => __DIR__ . '/../..' . '/app/models/Common/Model.php',
         'Models\\Post' => __DIR__ . '/../..' . '/app/models/Post.php',
         'Models\\User' => __DIR__ . '/../..' . '/app/models/User.php',
     );
