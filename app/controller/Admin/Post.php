@@ -11,7 +11,6 @@ class Post extends Controller
         $postModel = new PostModel();
         $this->generate('/admin/post/index', $postModel->getPosts(GlobalFilters::postFilter()));
     }
-
 }
 
 

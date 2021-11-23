@@ -116,15 +116,16 @@ class Select extends Bridge
         }
         if (!empty($this->whereCondition)) {
         $where = new Where($this->whereCondition);
-        $sglStringW = $where->getSqlWhereString();
+        $sql .= $where->getSqlWhereString();
         }
-        return $sql.$sglStringW;
+        return $sql;
     }
     public function execute()
     {
         $result = $this->fromDB();
         var_dump($result);
-        $result = $result->fetchAll(\PDO::FETCH_ASSOC
-        );
+        $result = $result->fetchAll(\PDO::FETCH_ASSOC);
+        var_dump($result);
+        return $result;
     }
 }

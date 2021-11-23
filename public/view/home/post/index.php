@@ -11,16 +11,20 @@
 <body>
 <form action="" method="post">
     <div class="col-sm-3">
+        <label class="form-label">ID</label>
+        <input type="text" class="form-control" name="id" value="<?=$data['id'] ?>">
+    </div>
+    <div class="col-sm-3">
         <label class="form-label">Subject</label>
-        <input type="text" class="form-control" name="subject" >
+        <input type="text" class="form-control" name="subject" value="<?=$data['subject'] ?>">
     </div>
     <div class="col-sm-3">
         <label class="form-label">Details</label>
-        <input type="text" class="form-control" name="details">
+        <input type="text" class="form-control" name="details" value="<?=$data['detail'] ?>">
     </div>
     <div class="col-sm-3">
         <label class="form-label">Author</label>
-        <input type="text" class="form-control" name="author">
+        <input type="text" class="form-control" name="author" value="<?=$data['author_id'] ?>">
     </div>
 
     <div class="col-12">
@@ -28,12 +32,15 @@
     </div>
     <br>
 </form>
-<table></table>
+
+<table>
 <?php foreach($data as $key => $row)  : ?>
 <tr>
     <?php foreach($row as $key => $value)  : ?>
-    <td><?=$value ;?></td>
+    <td><?=$value ?></td>
     <?php endforeach; ?>
+    <td><a href="update?<?=$row['id'] ?>"> Update</a></td>
+    <td><a href="delete?<?=$row['id'] ?>"> Delete</a></td>
     </tr>
 <?php endforeach; ?>
 </table>

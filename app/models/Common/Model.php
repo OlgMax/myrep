@@ -13,5 +13,17 @@ class Model
     {
         return $this->sql->select();
     }
+    public function insert()
+    {
+        return $this->sql->insert();
+    }
+    public function delete()
+    {
+        return $this->sql->delete();
+    }
+    public function update()
+    {
+        return $this->sql->update();
+    }
 
 }
