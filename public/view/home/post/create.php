@@ -1,4 +1,4 @@
-<?=include "head.html"; ?>
+<?php include "head.html"; ?>
 <form name="create" action="" method="post">
     <div class="col-sm-3">
         <label class="form-label">Subject</label>
