@@ -1,4 +1,4 @@
-<?=include "head.html"; ?>
+<?php include "head.html"; ?>
 Delete ID <?=$_SERVER['REDIRECT_QUERY_STRING'] ?>?
 <form action="" method="post">
 <div class="col-12">
