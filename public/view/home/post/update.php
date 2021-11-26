@@ -1,4 +1,4 @@
-<?=include "head.html"; ?>
+<?php include "head.html"; ?>
 <form action="" method="post">
         <input type="text" class="form-control" name="id" hidden value="<?=$data['id'] ?>">
 
