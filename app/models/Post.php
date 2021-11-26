@@ -41,19 +41,8 @@ class Post extends Model
         if(isset($_POST['update']))
         {
             $update->setWhereCondition('id='.$_SERVER['REDIRECT_QUERY_STRING']);
-            if (!empty($_POST['subject'])) {
-                $update->setFieldNames('subject');
-                $update->setValues("$_POST[subject]");
-            }
-            if (!empty($_POST['details'])) {
-                $update->setFieldNames('detail');
-                $update->setValues("$_POST[details]");
-            }
-            if (!empty($_POST['author'])) {
-                $update->setFieldNames('author_id');
-                $update->setValues("$_POST[author]");
-            }
-            $update->setWhereCondition('id='.$_SERVER['REDIRECT_QUERY_STRING']);
+            unset($filters['id']);
+            $update->setFieldNames($filters);
         }
         return $update->execute();
     }

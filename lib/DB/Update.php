@@ -6,7 +6,6 @@ class Update extends Bridge
 {
     private $tableNames;
     private $fieldNames = '*';
-    public $values;
     public $whereCondition;
 
     public function getTableNames()
@@ -19,31 +18,27 @@ class Update extends Bridge
         if (is_string($this->fieldNames)) {
             $outputSpring = $this->fieldNames;
         } elseif (is_array($this->fieldNames)) {
-            foreach ($this->fieldNames as $value) {
-                $outputSpring .= $value;
+            $len=count($this->fieldNames);
+            foreach ($this->fieldNames as $key => $value) {
+                    $outputSpring .= $key . '= "' . $value .'"';
+                if( $len > 1) {
+                    $outputSpring .=',';
+                }
+                $len--;
             }
         }
         return $outputSpring;
-    }
-
-    public function getValues()
-    {
-        return $this->values;
     }
 
     public function setTableNames($tableNames): void
     {
         $this->tableNames = $tableNames;
     }
-    public function setFieldNames(string $fieldNames): void
+    public function setFieldNames($fieldNames)
     {
         $this->fieldNames = $fieldNames;
     }
 
-    public function setValues($values): void
-    {
-        $this->values = $values;
-    }
 
     public function getWhereCondition()
     {
@@ -58,7 +53,7 @@ class Update extends Bridge
     public function getSqlString()
     {
         if (isset($_POST['update'])) {
-            $sql = ' UPDATE ' . $this->getTableNames() . ' SET ' . $this->getFieldNames() . ' = "' . $this->getValues() . '"';
+            $sql = ' UPDATE ' . $this->getTableNames() . ' SET ' . $this->getFieldNames();
         }
         if (!empty($this->whereCondition)) {
             $where = new Where($this->whereCondition);
@@ -69,9 +64,7 @@ class Update extends Bridge
     public function execute()
     {
         $result = $this->fromDB();
-        var_dump($result);
         $result = $result->fetchAll(\PDO::FETCH_ASSOC);
-        var_dump($result);
         return $result;
     }
 }

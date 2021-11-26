@@ -55,7 +55,6 @@ class Delete extends Bridge
     public function execute()
     {
         $result = $this->fromDB();
-        var_dump($result);
         $result = $result->fetchAll(\PDO::FETCH_ASSOC);
         return $result;
     }

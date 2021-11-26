@@ -1,3 +1,4 @@
+<?=include "head.html"; ?>
 <form name="create" action="" method="post">
     <div class="col-sm-3">
         <label class="form-label">Subject</label>
@@ -16,5 +17,4 @@
         <input type="submit" name="create" class="btn btn-primary" value="Create Post">
     </div>
     <br>
-
 </form>

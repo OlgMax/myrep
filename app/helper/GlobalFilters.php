@@ -6,6 +6,7 @@ class GlobalFilters
 {
     const EXEPTIONS = [
         'send',
+        'update',
     ];
 
     public static function postFilter(): array

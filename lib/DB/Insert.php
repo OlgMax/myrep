@@ -53,9 +53,7 @@ class Insert extends Bridge
     public function execute()
     {
         $result = $this->fromDB();
-        var_dump($result);
         $result = $result->fetchAll(\PDO::FETCH_ASSOC);
-        var_dump($result);
         return $result;
     }
 }
