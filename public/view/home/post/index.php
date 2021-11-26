@@ -1,4 +1,4 @@
-<?=include "head.html"; ?>
+<?php include "head.html"; ?>
 <body>
 <a class="btn btn-warning" href="create"> Create</a>
 <table class="table table-striped">
